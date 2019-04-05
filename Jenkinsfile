@@ -12,28 +12,6 @@ pipeline {
     TAG_DEV = "${env.TAG}:${env.VERSION}-${env.BUILD_NUMBER}"
   }
   stages {
-    /*
-    stage('Send event') {
-      steps {
-        checkout scm
-        container("curl") {
-          sendCloudEvent(
-            receiver: 'event-broker.keptn.svc.cluster.local/docker',
-            type: 'sh.keptn.events.new-artefact',
-            source: 'Jenkins', 
-            data: [
-              [key: 'gitHubOrg', value: "keptn-tiger"],
-              [key: 'project', value: "sockshop"],
-              [key: 'stage', value: ""],
-              [key: 'service', value: "carts"],
-              [key: 'image', value: "10.7.244.127:5000/library/sockshop/carts"],
-              [key: 'tag', value: "0.6.0-1"]
-            ]
-          )
-        }
-      }
-    }
-    */
     stage('Maven build') {
       steps {
         checkout scm

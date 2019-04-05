@@ -1,4 +1,4 @@
-registry: sockshop
+registry: carts-example
 stages:
   - name: "dev"
     deployment_strategy: "direct"
