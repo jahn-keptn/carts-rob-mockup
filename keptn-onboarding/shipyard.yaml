@@ -1,4 +1,4 @@
-registry: carts-example
+registry: carts-registry
 stages:
   - name: "dev"
     deployment_strategy: "direct"
